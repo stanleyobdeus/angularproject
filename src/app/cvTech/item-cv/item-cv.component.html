@@ -1,3 +1,9 @@
-<li class="list-group-item">
-  <img src="assets/images/rotating_card_profile.png" width="50px" height="50px" alt="not found">  Stanley OBDEUS
+<li class="list-group-item" 
+   (click)="selectPersonne()">
+  <img src="assets/images/{{personne.path}}"
+   width="50px" 
+   height="50px" 
+   alt={{personne.firstname}} 
+   >  
+   {{personne.firstname}} {{personne.name}}
 </li>

@@ -8,6 +8,7 @@ import { Personne } from 'src/app/Model/Personne';
 })
 export class CvComponent implements OnInit {
 personnes: Personne[];
+selectedPersonne: Personne;
   constructor() { }
 
   ngOnInit() {
@@ -17,4 +18,8 @@ personnes: Personne[];
     ]
   }
 
+selectPersonne(personne) {
+  console.log(personne);
+ this.selectedPersonne=personne;
+}
 }

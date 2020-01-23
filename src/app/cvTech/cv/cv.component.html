@@ -2,10 +2,10 @@
 <div class="row" style="margin-top: 20px;">
 
     <div class="col-md-6 col-sm-3">
-      <app-liste-cv></app-liste-cv>
+      <app-liste-cv (selectedPersonne)="selectPersonne($event)" [personnes]="personnes"></app-liste-cv>
     </div>
 
     <div class="col-md-6 col-sm-3">
-      <app-detail-cv></app-detail-cv>
+     <app-detail-cv [personne]="selectedPersonne"></app-detail-cv>
     </div>
 </div>
