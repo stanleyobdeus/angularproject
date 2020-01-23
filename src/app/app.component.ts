@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'formationAngular';
+  title = 'formation Angular';
+  bgcolor='red';
+  show= false;
+
+  changeStatus() {
+    this.show=!this.show
+  }
 }

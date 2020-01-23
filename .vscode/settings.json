@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "onidb",
+            "dialect": "OracleDB",
+            "name": "Oni",
+            "password": "pass1234",
+            "port": 1521,
+            "server": "192.168.150.3\t",
+            "username": "stanley"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
