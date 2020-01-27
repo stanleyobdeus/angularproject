@@ -6,6 +6,6 @@
     </div>
 
     <div class="col-md-6 col-sm-3">
-     <app-detail-cv [personne]="selectedPersonne"></app-detail-cv>
+     <app-detail-cv *ngIf="selectedPersonne" [personne]="selectedPersonne"></app-detail-cv>
     </div>
 </div>

@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class.component.css']
 })
 export class ClassComponent implements OnInit {
+  team = [
+    'est',
+    'om',
+    'barca',
+    'milan'
+  ]
+  
   est=false;
   milan=true;
   barca=false;
