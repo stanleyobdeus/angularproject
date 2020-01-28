@@ -18,7 +18,9 @@ selectedPersonne: Personne;
       new Personne(2,'Vladimir','OBDEUS',149,'tome.jpg',987,'Lead Developpeur'),
       new Personne(3,'Norzelus','Myriam',149,'',987,'Nurse')
     ]
+    this.premierService.addData('data from cv component');
     this.premierService.logger(this.personnes);
+    
   }
 
 selectPersonne(personne) {
