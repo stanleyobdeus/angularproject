@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PremierService } from '../premier.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-color',
@@ -10,7 +11,7 @@ import { PremierService } from '../premier.service';
 })
 export class ColorComponent implements OnInit {
   color= 'red';
-  constructor(private premierService: PremierService) { }
+  constructor(private premierService: PremierService,private router: Router) { }
 
   ngOnInit() {
   }
@@ -24,5 +25,10 @@ export class ColorComponent implements OnInit {
   }
   loogerMesData(){
     this.premierService.logger('test');
+  }
+
+  goToCv(){
+    const link=['cv']
+    this.router.navigate(link);
   }
 }
