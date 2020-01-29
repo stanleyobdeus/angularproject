@@ -19,6 +19,7 @@ import { HighlightDirective } from './directive/highlight.directive';
 import { RainbowDirective } from './directive/rainbow.directive';
 import { DefaultImagePipe } from './cvTech/default-image.pipe';
 import { EmbauchComponent } from './cvTech/embauch/embauch.component';
+import { ROUTING } from './app-routing';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EmbauchComponent } from './cvTech/embauch/embauch.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
