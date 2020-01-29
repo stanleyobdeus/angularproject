@@ -20,6 +20,7 @@ import { RainbowDirective } from './directive/rainbow.directive';
 import { DefaultImagePipe } from './cvTech/default-image.pipe';
 import { EmbauchComponent } from './cvTech/embauch/embauch.component';
 import { ROUTING } from './app-routing';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ROUTING } from './app-routing';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
-    EmbauchComponent
+    EmbauchComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
