@@ -22,6 +22,7 @@ import { EmbauchComponent } from './cvTech/embauch/embauch.component';
 import { ROUTING } from './app-routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { DatailComponent } from './cvTech/datail/datail.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     DefaultImagePipe,
     EmbauchComponent,
     HeaderComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    DatailComponent
   ],
   imports: [
     BrowserModule,
