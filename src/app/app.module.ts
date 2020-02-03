@@ -23,6 +23,8 @@ import { ROUTING } from './app-routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { DatailComponent } from './cvTech/datail/datail.component';
+import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
+import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { DatailComponent } from './cvTech/datail/datail.component';
     EmbauchComponent,
     HeaderComponent,
     RouterSimulatorComponent,
-    DatailComponent
+    DatailComponent,
+    AddCvComponent,
+    DeleteCvComponent
   ],
   imports: [
     BrowserModule,
