@@ -25,6 +25,7 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
 import { DatailComponent } from './cvTech/datail/datail.component';
 import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
     RouterSimulatorComponent,
     DatailComponent,
     AddCvComponent,
-    DeleteCvComponent
+    DeleteCvComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
