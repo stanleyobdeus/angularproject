@@ -6,6 +6,7 @@ import { DatailComponent } from './cvTech/datail/datail.component';
 import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 import { ErrorComponent } from './error/error.component';
+import { LoginComponent } from './login/login.component';
 
 const APP_ROUTING: Routes = [
 
@@ -19,6 +20,7 @@ const APP_ROUTING: Routes = [
     ]},
     {path: '', component: CvComponent},
     {path: 'color/:default/:secondParam', component: ColorComponent},
+    {path: 'login', component: LoginComponent},
     {path: '**', component: ErrorComponent},
     
 ]

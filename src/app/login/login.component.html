@@ -1,0 +1,18 @@
+<form #loginFormulaire="ngForm">
+
+ <label for="email">Email</label>
+ <input email required 
+ type="text" 
+ ngModel name="email" 
+ class="form-control" id="email">
+
+ <label for="pwd">Password</label>
+ <input required
+ minlength="4" 
+ type="password" 
+ ngModel name="password" 
+ class="form-control" id="pwd">
+
+ 
+<button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire)">Se Connecter</button>
+</form>
