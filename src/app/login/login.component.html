@@ -3,15 +3,23 @@
  <label for="email">Email</label>
  <input email required 
  type="text" 
- ngModel name="email" 
+ ngModel name="email"
+ #inputMail="ngModel" 
  class="form-control" id="email">
+ <div class="alert alert-danger" *ngIf="inputMail.invalid && inputMail.dirty">
+    Votre Email n'est pas valide..!
+   </div>
 
  <label for="pwd">Password</label>
  <input required
  minlength="4" 
  type="password" 
  ngModel name="password" 
+ #pwdInput="ngModel"
  class="form-control" id="pwd">
+ <div class="alert alert-danger" *ngIf="pwdInput.invalid && pwdInput.touched">
+ Le password doit avoir au mininum 4 caractere..!
+</div>
 
  
 <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire)">Se Connecter</button>
