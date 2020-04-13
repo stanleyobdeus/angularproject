@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 //https://jsonplaceholder.typicode.com/
+//https://loopback.io/getting-started.html
 //npm install -g @loopback/cli
 //lb    pour creer backend loopback
 
