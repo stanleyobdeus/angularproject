@@ -28,6 +28,8 @@ import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
 import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { ObsevableComponent } from './obsevable/obsevable.component';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -54,12 +56,14 @@ import { ObsevableComponent } from './obsevable/obsevable.component';
     DeleteCvComponent,
     ErrorComponent,
     LoginComponent,
-    ObsevableComponent
+    ObsevableComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ROUTING
   ],
   providers: [],

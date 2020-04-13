@@ -7,7 +7,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
