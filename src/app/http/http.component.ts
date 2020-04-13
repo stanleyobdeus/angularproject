@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 //https://jsonplaceholder.typicode.com/
+//npm install -g @loopback/cli
+//lb    pour creer backend loopback
 
 @Component({
   selector: 'app-http',
