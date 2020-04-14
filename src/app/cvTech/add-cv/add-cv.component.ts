@@ -10,15 +10,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-cv.component.css']
 })
 export class AddCvComponent implements OnInit {
-
+  errorMessage = '';
   constructor(private cvService: CvService, private router: Router) { }
 
   ngOnInit() {
   }
-  addPersonne(formulaire: NgForm){
-    const link=['cv'];
-    this.cvService.addPersonne(formulaire.value);
-    this.router.navigate(link);
+  addPersonne(formulaire: NgForm) {
+    this.cvService.addPersonne(formulaire.value).subscribe(
+      (response) => {
+        const link = ['cv'];
+        this.router.navigate(link);
+      },
+      (error) => {
+          this.errorMessage = 'Probleme de connexion a votre serveur. priere de consulter ladministrateur';
+          console.log(error);
+      }
+    );
+    //this.cvService.addPersonne(formulaire.value);
   }
 
 }

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Personne } from '../Model/Personne';
 import { Observable } from 'rxjs';
@@ -33,9 +33,9 @@ export class CvService {
     return personne;
 
   }
-
-  addPersonne(personne: Personne): void{
-    personne.id=this.personnes[this.personnes.length-1].id+1
-    this.personnes.push(personne);
+  addPersonne(personne: Personne): Observable<any> {
+   // personne.id=this.personnes[this.personnes.length-1].id+1
+    //this.personnes.push(personne);
+   return this.http.post(this.link, personne);
   }
 }
