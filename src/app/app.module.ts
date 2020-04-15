@@ -1,3 +1,4 @@
+import { LoginInterceptorProvider } from './interceptors/login.interceptors';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -66,7 +67,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ROUTING
   ],
-  providers: [],
+  providers: [
+    LoginInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

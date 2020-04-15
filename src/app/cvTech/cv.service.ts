@@ -36,11 +36,11 @@ export class CvService {
   addPersonne(personne: Personne): Observable<any> {
    // personne.id=this.personnes[this.personnes.length-1].id+1
     //this.personnes.push(personne);
-     const token = localStorage.getItem('token');
-     if (token) {
-      const params = new HttpParams().set('access_token', token);
-      return this.http.post( this.link , personne, {params});
-    }
+    // const token = localStorage.getItem('token');
+    // if (token) {
+     // const params = new HttpParams().set('access_token', token);
+     // return this.http.post( this.link , personne, {params});
+   // }
    return this.http.post( this.link , personne);
   }
 
