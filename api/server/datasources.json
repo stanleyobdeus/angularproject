@@ -1,15 +1,16 @@
 {
-    "db": {
-        "name": "db",
-        "connector": "memory"
-    },
-    "AymenDb": {
-        "host": "localhost",
-        "port": 3306,
-        "url": "",
-        "password": "oni1234",
-        "user": "root",
-        "connector": "mysql",
-        "database": "oni"
-    }
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "AymenDb": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "oni",
+    "password": "oni1234",
+    "name": "AymenDb",
+    "user": "root",
+    "connector": "mysql"
+  }
 }

@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   login(credentials) {
    this.authentificationService.login(credentials).subscribe(
      (response) => {
-       const token = response[' id '];
+       const token = response['id'];
        const link = ['cv'];
        localStorage.setItem('token', token);
        console.log(token);
