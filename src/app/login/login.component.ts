@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthentificationService } from './../authentification.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -7,12 +9,23 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
+  constructor(private authentificationService: AuthentificationService, private router: Router) { }
 
   ngOnInit() {
   }
-  login(form:NgForm){
-
+  login(credentials) {
+   this.authentificationService.login(credentials).subscribe(
+     (response) => {
+       const token = response[' id '];
+       const link = ['cv'];
+       localStorage.setItem('token', token);
+       console.log(token);
+       this.router.navigate(link);
+     },
+     (error) => {
+       console.log(error);
+    }
+   );
   }
 
 }
