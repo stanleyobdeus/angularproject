@@ -26,16 +26,20 @@ export class CvService {
     return this.http.get<Personne[]>(this.link);
   }
 
-  getPersonneById(id: number): Personne {
-    const personne = this.personnes.find( personne =>{
-      return personne.id == id;
-    });
-    return personne;
+  getPersonneById(id: number): Observable<Personne> {
+  //  const personne = this.personnes.find( personne =>{
+   //   return personne.id == id;
+   // });
+    return this.http.get<Personne>(this.link + `/${id}`);
 
   }
   addPersonne(personne: Personne): Observable<any> {
    // personne.id=this.personnes[this.personnes.length-1].id+1
     //this.personnes.push(personne);
    return this.http.post(this.link, personne);
+  }
+
+  deletePersonne(id: number) {
+   return this.http.delete(this.link + `/${id}`);
   }
 }
