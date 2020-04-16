@@ -1,3 +1,4 @@
+import { LoginGuard } from './guard/login.guard';
 import { Routes, RouterModule } from "@angular/router";
 import { CvComponent } from './cvTech/cv/cv.component';
 import { ColorComponent } from './color/color.component';
@@ -13,8 +14,8 @@ const APP_ROUTING: Routes = [
     {path:'cv',children:[
         {path: '', component: CvComponent},
         // {path: 'cv', redirectTo:'/' ,pathMatch:'full'},
-         {path: 'delete/:id', component: DeleteCvComponent},
-         {path: 'add', component: AddCvComponent},
+         {path: 'delete/:id', component: DeleteCvComponent, canActivate: [LoginGuard]},
+         {path: 'add', component: AddCvComponent, canActivate: [LoginGuard]},
          {path: ':id', component: DatailComponent},
          
     ]},

@@ -11,4 +11,8 @@ export class AuthentificationService {
   login(credential) {
   return this.http.post(this.link, credential);
   }
+
+  logout() {
+    localStorage.removeItem('token');
+  }
 }
