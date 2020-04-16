@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  visibility = false;
   constructor(private authentificationService: AuthentificationService) { }
 
   ngOnInit() {
@@ -19,6 +19,10 @@ export class HeaderComponent implements OnInit {
 
   isLogger() {
     this.authentificationService.isLogged();
+  }
+
+  show() {
+    this.visibility = !this.visibility;
   }
 
 }
