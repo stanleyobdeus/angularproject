@@ -32,6 +32,7 @@ import { LoginComponent } from './login/login.component';
 import { ObsevableComponent } from './obsevable/obsevable.component';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutGuard } from './guard/logout.guard';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     LoginInterceptorProvider,
-    LoginGuard
+    LoginGuard,
+    LogoutGuard
   ],
   bootstrap: [AppComponent]
 })

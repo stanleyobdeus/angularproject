@@ -15,4 +15,8 @@ export class AuthentificationService {
   logout() {
     localStorage.removeItem('token');
   }
+
+  isLogged() {
+    return !! localStorage.getItem('token');
+  }
 }
