@@ -48,5 +48,9 @@ export class CvService {
    return this.http.delete(this.link + `/${id}`);
   }
 
+  updatePersonne(personne: Personne) {
+   return this.http.put(this.link, personne);
+  }
+
 
 }

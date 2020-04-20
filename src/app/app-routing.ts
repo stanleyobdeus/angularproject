@@ -1,3 +1,4 @@
+import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
 import { LogoutGuard } from './guard/logout.guard';
 import { LoginGuard } from './guard/login.guard';
 import { Routes, RouterModule } from "@angular/router";
@@ -16,6 +17,7 @@ const APP_ROUTING: Routes = [
         {path: '', component: CvComponent},
         // {path: 'cv', redirectTo:'/' ,pathMatch:'full'},
          {path: 'delete/:id', component: DeleteCvComponent, canActivate: [LoginGuard]},
+         {path: 'updateCv/:id', component: UpdateCvComponent},
          {path: 'add', component: AddCvComponent, canActivate: [LoginGuard]},
          {path: ':id', component: DatailComponent},
     ]},

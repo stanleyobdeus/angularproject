@@ -33,6 +33,7 @@ import { ObsevableComponent } from './obsevable/obsevable.component';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutGuard } from './guard/logout.guard';
+import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { LogoutGuard } from './guard/logout.guard';
     ErrorComponent,
     LoginComponent,
     ObsevableComponent,
-    HttpComponent
+    HttpComponent,
+    UpdateCvComponent
   ],
   imports: [
     BrowserModule,

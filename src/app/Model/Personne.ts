@@ -1,9 +1,9 @@
 export class Personne {
 id: number;
 name: string;
-firstname; string;
+firstname: string;
 age: number;
-path:string;
+path: string;
 cin: number;
 job: string;
  constructor(id=0,name='',firstname='',age,path='',cin=1,job=''){
