@@ -1,4 +1,4 @@
-<input type="text" #inputSearch class="form-control" (keyup)="search(inputSearch)">
+<input type="text" [(ngModel)]="chaine" class="form-control" (keyup)="search(chaine)">
 
 <ol>
     <li *ngFor="let personne of searchResult" class="list-group-item" (click)="selectPersonne(personne)">

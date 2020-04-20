@@ -1,6 +1,6 @@
+import { Personne } from 'src/app/Model/Personne';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Personne } from '../Model/Personne';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -50,6 +50,12 @@ export class CvService {
 
   updatePersonne(personne: Personne) {
    return this.http.put(this.link, personne);
+  }
+
+  findByName(name): Observable<Personne[]> {
+    const filter = `{"where":{"name":{"like":"%${name}%"}}}`;
+    const params = new HttpParams().set('filter', filter );
+    return this.http.get<Personne[]>(this.link, {params});
   }
 
 
