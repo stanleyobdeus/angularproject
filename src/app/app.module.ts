@@ -34,6 +34,7 @@ import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutGuard } from './guard/logout.guard';
 import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
+import { SearchComponent } from './cvTech/search/search.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
     LoginComponent,
     ObsevableComponent,
     HttpComponent,
-    UpdateCvComponent
+    UpdateCvComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
